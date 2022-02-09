@@ -105,7 +105,11 @@ https://datatracker.ietf.org/doc/html/rfc7946
 
   这也意味着 `linear ring` 的 `LineString` 至少拥有 4 个 `position` 。
 
--  `linear ring` 可以用来表示多边形的 boundary 和 hole ， boundary 的 `linear ring` 呈现逆时针方向， hole 的 `linear ring` 呈现顺时针方向。右手系的三维直角坐标系的正方向是逆时针，左手系的三维直角坐标系的正方向是顺时针， `three.js` 的三维直角坐标系是左手系。
+- `linear ring` 可以用来表示多边形的 boundary 和 hole ， boundary 的 `linear ring` 呈现逆时针方向， hole 的 `linear ring` 呈现顺时针方向。
+
+  右手系的三维直角坐标系的正方向是逆时针，左手系的三维直角坐标系的正方向是顺时针，从 z 轴向 xoy 平面去看就可以判断时针的正逆了。
+
+  常用的三维直角坐标系是右手系， `three.js` 的也是右手系。
 
 > 注：
 >
@@ -118,3 +122,9 @@ https://datatracker.ietf.org/doc/html/rfc7946
 For type "Polygon", the "coordinates" member MUST be an array of linear ring coordinate arrays.
 
 如果 `type` 是 `Polygon` ，则 `coordinates` 属性是一个拥有至少 1 个 `linear ring` 的数组，且第一个 `linear ring` 代表 boundary ，其余后续的 `linear ring` 都代表 hole 。
+
+
+
+# 右手定则
+
+关于右手定则、右手系等更多资料请查看： https://wuli.wiki//online/RHRul.html 。
