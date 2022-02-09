@@ -63,8 +63,8 @@ https://datatracker.ietf.org/doc/html/rfc7946
 
 如果 `type` 为 `LineString` ，则 `coordinates` 属性是一个拥有至少 2 个 `position` 的数组（ `position` 是一个依次存储经度和纬度值的一维数组）。
 
-```json
-...
+```js
+// 省略...
 "geometry": {
 	"type": "LineString",
 	"coordinates": [
@@ -74,7 +74,7 @@ https://datatracker.ietf.org/doc/html/rfc7946
 		[105.0, 1.0]
 	]
 }
-...
+// 省略...
 ```
 
 
@@ -87,8 +87,8 @@ https://datatracker.ietf.org/doc/html/rfc7946
 
 -  `linear ring` 是闭合的 `LineString` ，“闭合”是指 `LineString` 的首尾 `position` 必须相同，比如一个三角形的 `linear ring` 如下：
 
-  ```json
-  ...
+  ```js
+  // 省略...
   "geometry": {
   	"type": "Polygon",
   	"coordinates": [
@@ -100,7 +100,7 @@ https://datatracker.ietf.org/doc/html/rfc7946
           ]
   	]
   }
-  ...
+  // 省略...
   ```
 
   这也意味着 `linear ring` 的 `LineString` 至少拥有 4 个 `position` 。
